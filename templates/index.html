@@ -1,10 +1,130 @@
+
+<style>
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e; /* Fundo escuro para a página */
+    color: #e0e0e0; /* Cor do texto */
+}
+
+#page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header#p-header {
+    background-color: #1f1f1f; /* Cabeçalho escuro */
+    border-bottom: 1px solid #444; /* Borda do cabeçalho */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header#p-header #p-logo a {
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #f5a623; /* Cor do logo */
+    font-weight: bold;
+}
+
+main#content {
+    background-color: #3b3b3b; /* Fundo do conteúdo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#perfil {
+    text-align: center;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #555; /* Borda da foto de perfil */
+}
+
+h1 {
+    font-size: 2em;
+    color: #f5a623; /* Cor do título */
+    margin: 10px 0;
+}
+
+.bio {
+    font-size: 1.1em;
+    color: #dcdcdc; /* Cor da biografia */
+    margin-bottom: 20px;
+}
+
+.redes-sociais {
+    margin-top: 20px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff; /* Cor de fundo dos botões de redes sociais */
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.linkedin { background-color: #0077b5; }
+
+footer#p-footer {
+    background-color: #1f1f1f; /* Rodapé escuro */
+    border-top: 1px solid #444; /* Borda do rodapé */
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Pessoal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 </head>
 <body>
-<h1>Minha página pessoal</h1>
+    <div id="page">
+        <header id="p-header">
+            <div id="p-logo">
+                <a  title="Página principal">Perfil Pessoal</a>
+            </div>
+        </header>
+        <main id="content">
+            <div id="perfil">
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Foto do Perfil" class="foto-perfil">
+                <h1>Thomas R. S. Queiroz</h1>
+                <p class="bio">Sou Thomas Ricardo dos Santos Queiroz, um estudante do 2°ano do Ensino Médio e do 2° termo do curso técnico de Desenvolvimento de Sistemas.</p>
+                <div class="redes-sociais">
+                    <a href="https://www.facebook.com/share/MRxpgaFm1DZywvbc/?mibextid=qi2Omg" target="_blank" class="social-icon facebook">Facebook</a>
+                    <a href="https://x.com/ThomasQueiroz10" target="_blank" class="social-icon twitter">X (Twitter)</a>
+                    <a href="https://github.com/ThomasQueiroz" target="_blank" class="social-icon linkedin">GitHub</a>
+                </div>
+            </div>
+        </main>
+        <footer id="p-footer">
+            <p>&copy; 2024 Thomas Queiroz</p>
+        </footer>
+    </div>
 </body>
 </html>
