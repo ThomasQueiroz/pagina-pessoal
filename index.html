@@ -1,0 +1,280 @@
+
+<style>
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e; /* Fundo escuro para a página */
+    color: #e0e0e0; /* Cor do texto */
+}
+
+#page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header#p-header {
+    background-color: #1f1f1f; /* Cabeçalho escuro */
+    border-bottom: 1px solid #444; /* Borda do cabeçalho */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header#p-header #p-logo a {
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #f5a623; /* Cor do logo */
+    font-weight: bold;
+}
+
+main#content {
+    background-color: #3b3b3b; /* Fundo do conteúdo */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    gap: 20px; /* Espaço entre a foto de perfil e os GIFs */
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #555; /* Borda da foto de perfil */
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #f5a623; /* Cor do título */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.bio {
+    font-size: 1.1em;
+    color: #dcdcdc; /* Cor da biografia */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gif-container {
+    width: 80px; /* Largura dos GIFs */
+    height: 150px; /* Altura dos GIFs */
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+}
+
+.secoes {
+    background-color: #4a4a4a; /* Fundo das seções */
+    border-radius: 8px;
+    padding: 20px; /* Aumenta o padding das seções */
+    margin-top: 20px;
+    text-align: center; /* Centraliza o conteúdo das seções */
+}
+
+.secoes h2 {
+    color: #f5a623; /* Cor dos títulos das seções */
+    margin-bottom: 20px;
+}
+
+.secoes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.secoes li {
+    background-color: #333; /* Fundo dos itens da lista */
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px; /* Aumenta o padding dos itens */
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo dos itens */
+}
+
+.secoes li img.imagem-gosto {
+    border-radius: 4px;
+    width: 80px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 80px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin-bottom: 10px; /* Adiciona espaço abaixo das imagens */
+}
+
+.galeria-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centraliza as imagens na galeria */
+    margin-top: 10px;
+}
+
+.galeria-imagens img {
+    border-radius: 4px;
+    width: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 100px; /* Ajuste o tamanho das imagens conforme necessário */
+    object-fit: cover;
+}
+
+.gosto-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f5a623; /* Cor do título dos gostos com várias imagens */
+}
+
+.redes-sociais {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff; /* Cor de fundo dos botões de redes sociais */
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 4px;
+    font-size: 1em;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.social-icon.facebook { background-color: #3b5998; }
+.social-icon.twitter { background-color: #1da1f2; }
+.social-icon.linkedin { background-color: #0077b5; }
+
+footer#p-footer {
+    background-color: #1f1f1f; /* Rodapé escuro */
+    border-top: 1px solid #444; /* Borda do rodapé */
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.gif-container.left {
+    left: -120px !important; /* Move o GIF mais para a esquerda */
+    top: 50% !important; /* Centraliza o GIF verticalmente em relação à imagem de perfil */
+    transform: translateY(-50%) !important; /* Centraliza o GIF verticalmente */
+}
+
+.gif-container.right {
+    right: -60px !important; /* Mantém o GIF da direita na mesma posição */
+    top: 50% !important; /* Centraliza o GIF verticalmente em relação à imagem de perfil */
+    transform: translateY(-50%) !important; /* Centraliza o GIF verticalmente */
+}
+
+.gif-container img {
+    width: 150px !important; /* Tamanho quadrado do GIF */
+    height: 150px !important; /* Tamanho quadrado do GIF */
+    object-fit: cover !important; /* Ajusta o GIF dentro das dimensões */
+}
+
+</style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Pessoal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <div id="page">
+        <header id="p-header">
+            <div id="p-logo">
+                <a href="#" title="Página principal">Perfil Pessoal</a>
+            </div>
+        </header>
+        <main id="content">
+            <h1>Thomas R. S. Queiroz</h1>
+            <div id="perfil">
+                <div class="gif-container">
+                    <img src="{{ url_for('static', filename='images/gif-esquerda.gif') }}" alt="GIF Esquerda">
+                </div>
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Foto do Perfil" class="foto-perfil">
+                <div class="gif-container">
+                    <img src="{{ url_for('static', filename='images/gif-direita.gif') }}" alt="GIF Direita">
+                </div>
+            </div>
+            <p class="bio">Sou Thomas Ricardo dos Santos Queiroz, um estudante de 16 anos do 2°ano do Ensino Médio e do 2° termo do curso técnico de Desenvolvimento de Sistemas. Existem muitas coisas que gosto, sendo elas: </p>
+
+            <!-- Seção de Gostos -->
+            <section class="secoes">
+                <h2>Coisas que Gosto</h2>
+                <ul>
+                    <li>
+                        <span class="gosto-titulo">Aplicativos</span>
+                        <div class="galeria-imagens">
+                        <img src="{{ url_for('static', filename='images/app1.jpg') }}" alt="Aplicativos" class="imagem-gosto">
+                        <img src="{{ url_for('static', filename='images/app2.jpg') }}" alt="Aplicativos" class="imagem-gosto">
+                        <img src="{{ url_for('static', filename='images/app3.jpg') }}" alt="Aplicativos" class="imagem-gosto">
+                        <img src="{{ url_for('static', filename='images/app4.jpg') }}" alt="Aplicativos" class="imagem-gosto">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="gosto-titulo">Jogos de Celular</span>
+                        <div class="galeria-imagens">
+                            <img src="{{ url_for('static', filename='images/jogo-celular1.jpg') }}" alt="Jogo de Celular 1" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-celular2.jpg') }}" alt="Jogo de Celular 2" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-celular3.jpg') }}" alt="Jogo de Celular 3" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-celular4.jpg') }}" alt="Jogo de Celular 4" class="imagem-gosto">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="gosto-titulo">Jogos de Computador</span>
+                        <div class="galeria-imagens">
+                            <img src="{{ url_for('static', filename='images/jogo-computador1.jpg') }}" alt="Jogo de Computador 1" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-computador2.jpg') }}" alt="Jogo de Computador 2" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-computador3.jpg') }}" alt="Jogo de Computador 3" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-computador4.jpg') }}" alt="Jogo de Computador 4" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/jogo-computador5.jpg') }}" alt="Jogo de Computador 5" class="imagem-gosto">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="gosto-titulo">Animes</span>
+                        <div class="galeria-imagens">
+                            <img src="{{ url_for('static', filename='images/anime1.jpg') }}" alt="Anime 1" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/anime2.jpg') }}" alt="Anime 2" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/anime3.jpg') }}" alt="Anime 3" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/anime4.jpg') }}" alt="Anime 4" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/anime5.jpg') }}" alt="Anime 5" class="imagem-gosto">
+                            <img src="{{ url_for('static', filename='images/anime6.jpg') }}" alt="Anime 6" class="imagem-gosto">
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/share/MRxpgaFm1DZywvbc/?mibextid=qi2Omg" target="_blank" class="social-icon facebook">Facebook</a>
+                <a href="https://x.com/ThomasQueiroz10" target="_blank" class="social-icon twitter">X (Twitter)</a>
+                <a href="https://github.com/ThomasQueiroz" target="_blank" class="social-icon linkedin">GitHub</a>
+            </div>
+        </main>
+        <footer id="p-footer">
+            <p>&copy; 2024 Thomas Queiroz</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
